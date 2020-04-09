@@ -1,0 +1,33 @@
+<app-drop-down-list>
+    <ng-container class="header">
+        <div
+      class="image image--small"
+      style="background-image: url('assets/img/icons/icon-cart-big.svg')"
+    >
+      <div class="notification notification--danger">
+        {{addedItems.length}}
+      </div>
+    </div>
+    </ng-container>
+    <div class="body">
+      <!-- items -->
+      <ul class="dropdown__items list list--vr-separator">
+        <app-drop-down-list-item
+          class="item-small-1"
+          *ngFor="let item of addedItems"
+          [product]="item"
+        ></app-drop-down-list-item>
+      </ul>
+      <!-- totals -->
+      <div class="separator"></div>
+      <div class="block">
+        <span class="lable">Total:</span>
+        <span class="lable">$2870</span>
+      </div>
+      <!-- actions -->
+      <div class="block list list--hr">
+        <a class="list-item btn btn--gray" href="">View Cart</a>
+        <a class="list-item btn btn--primary" href="">Checkout</a>
+      </div>
+    </div>
+  </app-drop-down-list>

@@ -1,0 +1,21 @@
+
+
+    <div class="item-medium-1__alert">Sale</div>
+    <div class="item-medium-1__image image" style="background-image: url('{{product.imageUrl}}')">
+        <a  class="item-medium-1__action" (click)='onItemAdding()'>Add to Cart</a>
+    </div>
+    <a href="#">
+        <h4>${{product.name}}</h4>
+        <div class="flex-row">
+            <div>
+                <del>$${{product.price}}</del>
+                <span class="lable">$${{product.price-product.discount}}</span>
+            </div>
+        </div>
+    </a>
+    <div class="crud-actions">
+        <a [routerLink]="['/product','details',product.id]"><i class="far fa-eye"></i></a>
+        <a [routerLink]="['/product','edit',product.id]"><i class="fas fa-edit"></i></a>
+        <a [routerLink]="['/product','delete',product.id]"><i class="fas fa-trash-alt"></i></a>
+ 
+    </div>

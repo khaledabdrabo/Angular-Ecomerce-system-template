@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { product } from './models/Product';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
+  // addedItems:product[];
   title = 'first-app';
+  // setProducts(pro:product[]):void{
+
+  //   this.addedItems=pro
+  // }
 }
